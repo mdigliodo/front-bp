@@ -1,0 +1,8 @@
+<div class="header align-center justify-between">
+    <div class="logo">
+        <img src="/assets/images/bni-bank.png" [height]="50" alt="logo-bank.png">
+    </div>
+    <div class="menu-content flex-row align-center">
+        <div class="menu-item" *ngFor="let item of menu" (click)="redirect(item.link)">{{ item.name }}</div>
+    </div>
+</div>

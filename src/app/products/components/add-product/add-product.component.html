@@ -1,0 +1,52 @@
+<h3>{{edit ? 'Update product' : 'Add new product'}}</h3>
+
+<div class="table-content align-center justify-center flex-col">
+    <form [formGroup]="formProduct">
+        <div class="justify-around">
+            <div class="justify-start flex-col gap-1">
+                <label>ID</label>
+                <input type="text" [disabled]="edit" [readOnly]="edit" formControlName="id" minlength="3" maxlength="10" (focusout)="verifyId()"
+                    [ngClass]="!getControl('id').pristine && getControl('id').invalid ? 'invalid' : ''">
+                <small *ngIf="!getControl('id')?.pristine && getControl('id')?.invalid" class="text-danger">ID is not
+                    valid!</small>
+            </div>
+            <div class="justify-start flex-col gap-1">
+                <label>Name</label>
+                <input type="text" formControlName="name" minlength="5" maxlength="100"
+                    [ngClass]="!getControl('name').pristine && getControl('name').invalid ? 'invalid' : ''">
+                <small *ngIf="!getControl('name')?.pristine && getControl('name')?.invalid" class="text-danger">This
+                    field is required!</small>
+            </div>
+        </div>
+        <div class="justify-around">
+            <div class="justify-start flex-col gap-1">
+                <label>Description</label>
+                <input type="text" formControlName="description" minlength="10" maxlength="200"
+                    [ngClass]="!getControl('description').pristine && getControl('description').invalid ? 'invalid' : ''">
+                <small *ngIf="!getControl('description')?.pristine && getControl('description')?.invalid"
+                    class="text-danger">This field is required!</small>
+            </div>
+            <div class="justify-start flex-col gap-1">
+                <label>Logo</label>
+                <input type="text" formControlName="logo">
+                <small *ngIf="!getControl('logo')?.pristine && getControl('logo')?.invalid" class="text-danger">This
+                    field is required!</small>
+            </div>
+        </div>
+        <div class="justify-around">
+            <div class="justify-start flex-col gap-1">
+                <label>Date of release</label>
+                <input type="date" formControlName="date_release" (change)="calculateDateRelease()">
+            </div>
+            <div class="justify-start flex-col gap-1">
+                <label>Date of revision</label>
+                <input type="date" formControlName="date_revision">
+            </div>
+        </div>
+    </form>
+
+    <div class="actions justify-center">
+        <button (click)="reset()" class="secondary">Clear</button>
+        <button (click)="saveProduct()" class="primary">{{edit ? 'Save chages' : 'Create'}}</button>
+    </div>
+</div>

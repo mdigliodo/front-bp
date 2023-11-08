@@ -1,0 +1,11 @@
+.table-content {
+  padding: 25px;
+  width: auto;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow-x: auto;
+
+  .actions {
+    padding: 10px 0;
+  }
+}

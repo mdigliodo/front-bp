@@ -1,0 +1,21 @@
+.header {
+  min-height: 50px;
+  width: -webkit-fill-available;
+  background-color: var(--color-dark);
+  padding: 0 50px;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  .menu-content {
+    gap: 20px;
+    height: 75px;
+    .menu-item {
+      color: var(--color-white);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}

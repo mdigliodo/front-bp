@@ -54,4 +54,12 @@ export class ListProductComponent implements OnInit {
     });
   }
 
+  showingResults() {
+    if (this.totalResult > this.quantityControl.value) {
+      return `Showing ${this.quantityControl.value} of ${this.totalResult}`
+    }
+
+    return `Showing ${this.totalResult} of ${this.totalResult}`
+  }
+
 }

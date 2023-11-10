@@ -1,3 +1,31 @@
 <app-layout>
-    <p>home works!</p>
+    <div class="content">
+        <h1 class="title">Welcome to Your Banking Experience with BNI</h1>
+
+        <section class="welcome">
+            <p class="description">
+                Welcome to BNI's online platform! We're thrilled to have you as part of our financial community. Below,
+                we
+                introduce the key features that will make your experience easier and more efficient:
+            </p>
+        </section>
+
+        <section class="benefits">
+
+            <div *ngFor="let item of bankBenefits" class="benefits-item">
+                <div class="title">{{ item.title }}</div>
+                <p>{{ item.description }}</p>
+            </div>
+
+        </section>
+
+        <section class="thanks">
+            <p class="description">Thank you for trusting BNI. </p>
+            <p class="description">We are committed to making your banking experience smooth and
+                personalized. </p>
+            <p class="description">Enjoy
+                all the advantages that our platform has to offer!</p>
+        </section>
+    </div>
+
 </app-layout>

@@ -1,9 +1,14 @@
 .table-content {
-  padding: 25px;
+  padding: 25px 25px 45px;
   width: auto;
   background-color: var(--color-white);
   border-radius: 8px;
   overflow-x: auto;
+
+  .header {
+    border-bottom: 1px solid var(--color-tertiary);
+    margin-bottom: 20px;
+  }
 
   .actions {
     padding: 10px 0;

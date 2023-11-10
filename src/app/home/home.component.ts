@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppConstants } from '../app.contants';
+import { Benefis } from '../shared/interfaces/benefis.interface';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  bankBenefits: Benefis[] = AppConstants.benefits;
 
   constructor() { }
 
